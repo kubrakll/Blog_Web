@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        
+        @@include("partials/title-meta.html", {"title": "Modals"})
+
+        @@include("partials/head-css.html")
+
+    </head>
+
+    <body data-topbar="dark">
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            @@include("partials/topbar.html")
+
+            @@include("partials/sidebar.html")
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        @@include("partials/page-title.html", {"pagetitle": "Amezia", "subtitle":"Ui Kit", "title": "Modals"})
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="mt-0 ">Modals Examples</h5>
+                                        <p class="card-title-desc">Modals are streamlined, but flexible
+                                            dialog prompts powered by JavaScript. They support a number of use cases
+                                            from user notification to completely custom content and feature a
+                                            handful of helpful subcomponents, sizes, and more.</p>
+        
+                                        <div class="modal-1 bs-example-modal" tabindex="-1" role="dialog">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title align-self-center mt-0">Modal title</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>One fine body&hellip;</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                                        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div><!-- /.modal-content -->
+                                            </div><!-- /.modal-dialog -->
+                                        </div><!-- /.modal -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- end row -->
+                        <div class="row">
+                            <div class="col-md-6">                        
+                                <div class="card">
+                                    <div class="card-body ">
+                                        <h5 class="card-title">Standard Modal</h5>
+                                        <p class="card-title-desc">Bootstrap standard modal boxe with title of here is some example.</p>
+                                        <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#myModal">Standard Modal</button>
+        
+                                            <!-- sample modal content -->
+                                            <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title align-self-center mt-0" id="myModalLabel">Modal Heading</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h5>Overflowing text to show scroll behavior</h5>
+                                                        <p>Cras mattis consectetur purus sit amet fermentum.
+                                                            Cras justo odio, dapibus ac facilisis in,
+                                                            egestas eget quam. Morbi leo risus, porta ac
+                                                            consectetur ac, vestibulum at eros.</p>
+                                                        <p>Praesent commodo cursus magna, vel scelerisque
+                                                            nisl consectetur et. Vivamus sagittis lacus vel
+                                                            augue laoreet rutrum faucibus dolor auctor.</p>
+                                                        <p>Aenean lacinia bibendum nulla sed consectetur.
+                                                            Praesent commodo cursus magna, vel scelerisque
+                                                            nisl consectetur et. Donec sed odio dui. Donec
+                                                            ullamcorper nulla non metus auctor
+                                                            fringilla.</p>
+                                                        <p>Cras mattis consectetur purus sit amet fermentum.
+                                                            Cras justo odio, dapibus ac facilisis in,
+                                                            egestas eget quam. Morbi leo risus, porta ac
+                                                            consectetur ac, vestibulum at eros.</p>
+                                                        <p>Praesent commodo cursus magna, vel scelerisque
+                                                            nisl consectetur et. Vivamus sagittis lacus vel
+                                                            augue laoreet rutrum faucibus dolor auctor.</p>
+                                                        <p>Aenean lacinia bibendum nulla sed consectetur.
+                                                            Praesent commodo cursus magna, vel scelerisque
+                                                            nisl consectetur et. Donec sed odio dui. Donec
+                                                            ullamcorper nulla non metus auctor
+                                                            fringilla.</p>
+                                                        <p>Cras mattis consectetur purus sit amet fermentum.
+                                                            Cras justo odio, dapibus ac facilisis in,
+                                                            egestas eget quam. Morbi leo risus, porta ac
+                                                            consectetur ac, vestibulum at eros.</p>
+                                                        <p>Praesent commodo cursus magna, vel scelerisque
+                                                            nisl consectetur et. Vivamus sagittis lacus vel
+                                                            augue laoreet rutrum faucibus dolor auctor.</p>
+                                                        <p>Aenean lacinia bibendum nulla sed consectetur.
+                                                            Praesent commodo cursus magna, vel scelerisque
+                                                            nisl consectetur et. Donec sed odio dui. Donec
+                                                            ullamcorper nulla non metus auctor
+                                                            fringilla.</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-light waves-effect" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary waves-effect waves-light">Save changes</button>
+                                                    </div>
+                                                </div><!-- /.modal-content -->
+                                            </div><!-- /.modal-dialog -->
+                                        </div><!-- /.modal -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">                        
+                                <div class="card">
+                                    <div class="card-body ">
+                                        <h5 class="card-title">Large modal</h5>
+                                        <p class="card-title-desc">Bootstrap large modal boxe with title of here is some example.</p>
+                                        <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-animation="bounce" data-target=".bs-example-modal-lg">Large modal</button>
+                                            <!--  Modal content for the above example -->
+                                        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title align-self-center mt-0" id="myLargeModalLabel">Large modal</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Cras mattis consectetur purus sit amet fermentum.
+                                                            Cras justo odio, dapibus ac facilisis in,
+                                                            egestas eget quam. Morbi leo risus, porta ac
+                                                            consectetur ac, vestibulum at eros.</p>
+                                                        <p>Praesent commodo cursus magna, vel scelerisque
+                                                            nisl consectetur et. Vivamus sagittis lacus vel
+                                                            augue laoreet rutrum faucibus dolor auctor.</p>
+                                                        <p class="mb-0">Aenean lacinia bibendum nulla sed consectetur.
+                                                            Praesent commodo cursus magna, vel scelerisque
+                                                            nisl consectetur et. Donec sed odio dui. Donec
+                                                            ullamcorper nulla non metus auctor
+                                                            fringilla.</p>
+                                                    </div>
+                                                </div><!-- /.modal-content -->
+                                            </div><!-- /.modal-dialog -->
+                                        </div><!-- /.modal -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">                        
+                                <div class="card">
+                                    <div class="card-body ">
+                                        <h5 class="card-title">Small modal</h5>
+                                        <p class="card-title-desc">Bootstrap small modal boxe with title of here is some example.</p>
+                                        <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-animation="bounce" data-target=".bs-example-modal-sm">Small modal</button>
+                                        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-sm">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title align-self-center mt-0" id="mySmallModalLabel">Small modal</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Cras mattis consectetur purus sit amet fermentum.
+                                                            Cras justo odio, dapibus ac facilisis in,
+                                                            egestas eget quam. Morbi leo risus, porta ac
+                                                            consectetur ac, vestibulum at eros.</p>
+                                                        <p>Praesent commodo cursus magna, vel scelerisque
+                                                            nisl consectetur et. Vivamus sagittis lacus vel
+                                                            augue laoreet rutrum faucibus dolor auctor.</p>
+                                                        <p class="mb-0">Aenean lacinia bibendum nulla sed consectetur.
+                                                            Praesent commodo cursus magna, vel scelerisque
+                                                            nisl consectetur et. Donec sed odio dui. Donec
+                                                            ullamcorper nulla non metus auctor
+                                                            fringilla.</p>
+                                                    </div>
+                                                </div><!-- /.modal-content -->
+                                            </div><!-- /.modal-dialog -->
+                                        </div><!-- /.modal -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">                        
+                                <div class="card">
+                                    <div class="card-body ">
+                                        <h5 class="card-title">Center modal</h5>
+                                        <p class="card-title-desc">Bootstrap center modal boxe with title of here is some example.</p>
+                                        <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-animation="bounce" data-target=".bs-example-modal-center">Center modal</button>
+                                        <div class="modal fade bs-example-modal-center" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title align-self-center mt-0" id="exampleModalLabel">Modal title</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Cras mattis consectetur purus sit amet fermentum.
+                                                            Cras justo odio, dapibus ac facilisis in,
+                                                            egestas eget quam. Morbi leo risus, porta ac
+                                                            consectetur ac, vestibulum at eros.</p>
+                                                        <p>Praesent commodo cursus magna, vel scelerisque
+                                                            nisl consectetur et. Vivamus sagittis lacus vel
+                                                            augue laoreet rutrum faucibus dolor auctor.</p>
+                                                        <p class="mb-0">Aenean lacinia bibendum nulla sed consectetur.
+                                                            Praesent commodo cursus magna, vel scelerisque
+                                                            nisl consectetur et. Donec sed odio dui. Donec
+                                                            ullamcorper nulla non metus auctor
+                                                            fringilla.</p>
+                                                    </div>
+                                                </div><!-- /.modal-content -->
+                                            </div><!-- /.modal-dialog -->
+                                        </div><!-- /.modal -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">                        
+                                <div class="card">
+                                    <div class="card-body ">
+                                        <h5 class="card-title">Tab Modal</h5>
+                                        <p class="card-title-desc">Simple modal boxe with title of here is some example.</p>
+        
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModaltab">
+                                            Tab Modal
+                                        </button>
+        
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModaltab" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabeltab" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title align-self-center mt-0" id="exampleModalLabeltab">New message</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="main-tabs">
+                                                            <div class="tab-6 m-b-30">
+                                                                <ul class="nav nav-tabs nav-justified">
+                                                                    <li class="nav-item">
+                                                                        <a class="nav-link" href="#home-6" data-toggle="tab" aria-expanded="false"><i class="fa fa-home mr-1"></i>Home</a>
+                                                                    </li>
+                                                                    <li class="nav-item">
+                                                                        <a class="nav-link" href="#profile-6" data-toggle="tab" aria-expanded="false"><i class="fa fa-user mr-1"></i>Profile</a>
+                                                                    </li>
+                                                                    <li class="nav-item">
+                                                                        <a class="nav-link active" href="#about-6" data-toggle="tab" aria-expanded="false"><i class="fa fa-id-card mr-1"></i>About</a>
+                                                                    </li>
+                                                                    <li class="nav-item">
+                                                                        <a class="nav-link" href="#contact-6" data-toggle="tab" aria-expanded="false"><i class="fa fa-phone mr-1"></i>Contact</a>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="tab-content">
+                                                                    <div class="tab-pane text-center home-text p-4" id="home-6">
+                                                                        <h3 class=" text-primary">Amezia Admin Template</h3>
+                                                                        <h6 class="text-muted">Sociis natoque penatibus et magnis dis parturient montes.</h6>
+                                                                    </div>
+                                                                    <div class="tab-pane p-4" id="profile-6">
+                                                                        <div class="row">
+                                                                            <div class="col-md-3">
+                                                                                <img src="assets/images/users/user-4.jpg" alt="" class="img-thumbnail">
+                                                                                <p class="text-center pt-3 text-muted card-13">John Miller</p>
+                                                                            </div>
+                                                                            <div class="col-md-9 col-sm-12">
+                                                                                <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                                                                <div class="profile-link">
+                                                                                    <a href=""><i class="fab fa-facebook-f mr-2 text-info"></i></a>
+                                                                                    <a href=""><i class="fab fa-twitter mr-2 text-primary"></i></a>
+                                                                                    <a href=""><i class="fab fa-google-plus-g mr-2"></i></a>
+                                                                                    <a href=""><i class="fab fa-dribbble-square mr-2 text-danger"></i></a>
+                                                                                </div>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane active p-4" id="about-6">
+                                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                                                        <p class="mb-0">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                                                    </div>
+                                                                    <div class="tab-pane p-4" id="contact-6">                          
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="form-row">
+                                                                                    <div class="form-group col-md-6">
+                                                                                        <label>Name</label>
+                                                                                        <input type="email" class="form-control" id="inputname4" placeholder="Name">
+                                                                                    </div>
+                                                                                    <div class="form-group col-md-6">
+                                                                                        <label >Phone</label>
+                                                                                        <input type="text" class="form-control" id="inputnom4" placeholder="Phone">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>Massege</label>
+                                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                                                </div>
+                                                                                <div class="col-auto">
+                                                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                                                </div>
+                                                                            </div>                                           
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Send message</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">                        
+                                <div class="card">
+                                    <div class="card-body ">
+                                        <h5 class="card-title">Accordion Modal</h5>
+                                        <p class="card-title-desc">Simple modal boxe with title of here is some example.</p>
+        
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalgrad">
+                                            Accordion Modal
+                                        </button>
+        
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModalgrad" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelgrad" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title align-self-center mt-0" id="exampleModalLabelgrad">New message</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="main-tabs">
+                                                            <div id="accordion-2" role="tablist" class="m-b-30">
+                                                                <div class="card bg-transparent mb-0">
+                                                                    <div class="card-header" role="tab" id="heading-7">
+                                                                        <h5 class="font-size-14 mb-0">
+                                                                            <a class=" text-primary" data-toggle="collapse" href="#collapse-7" aria-expanded="true" aria-controls="collapse-7">
+                                                                                Collapsible Group Item-1
+                                                                            </a>
+                                                                        </h5>
+                                                                    </div>
+        
+                                                                    <div id="collapse-7" class="collapse" role="tabpanel" aria-labelledby="heading-7" data-parent="#accordion-2">
+                                                                        <div class="card-body">
+                                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. 
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="card bg-transparent mb-0 pt-2">
+                                                                    <div class="card-header" role="tab" id="heading-8">
+                                                                        <h5 class="font-size-14 mb-0">
+                                                                            <a class="collapsed text-primary" data-toggle="collapse" href="#collapse-8" aria-expanded="false" aria-controls="collapse-8">
+                                                                                Collapsible Group Item-2
+                                                                            </a>
+                                                                        </h5>
+                                                                    </div>
+                                                                    <div id="collapse-8" class="collapse" role="tabpanel" aria-labelledby="heading-8" data-parent="#accordion-2">
+                                                                        <div class="card-body">
+                                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="card bg-transparent mb-0 pt-2">
+                                                                    <div class="card-header" role="tab" id="heading-9">
+                                                                        <h5 class="font-size-14 mb-0">
+                                                                            <a class="collapsed text-primary" data-toggle="collapse" href="#collapse-9" aria-expanded="false" aria-controls="collapse-9">
+                                                                                Collapsible Group Item-3
+                                                                            </a>
+                                                                        </h5>
+                                                                    </div>
+                                                                    <div id="collapse-9" class="collapse  show" role="tabpanel" aria-labelledby="heading-9" data-parent="#accordion-2">
+                                                                        <div class="card-body">
+                                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. 
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Send message</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">                        
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Image Modal</h5>
+                                        <p class="card-title-desc">Simple modal boxe with title of here is some example.</p>
+        
+                                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalLong-1">
+                                            Image Modal
+                                        </button>
+        
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModalLong-1" tabindex="-1" role="dialog">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title align-self-center mt-0" id="exampleModalLongTitle-1">Modal title</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="assets/images/small/img-1.jpg" alt="" class="img-fluid">
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                                           
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">                        
+                                <div class="card">
+                                    <div class="card-body ">
+                                        <h5 class="card-title">Responsive Modal</h5>
+                                        <p class="card-title-desc">Simple modal boxe with title of here is some example.</p>
+        
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalform">
+                                            Responsive Modal
+                                        </button>
+        
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModalform" tabindex="-1" role="dialog">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title align-self-center mt-0" id="exampleModalform1">New message</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                            <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="field-1" class="control-label">Name</label>
+                                                                    <input type="text" class="form-control" id="field-1" placeholder="John">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label for="field-2" class="control-label">Surname</label>
+                                                                    <input type="text" class="form-control" id="field-2" placeholder="Doe">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="field-3" class="control-label">Address</label>
+                                                                    <input type="text" class="form-control" id="field-3" placeholder="Address">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group no-margin">
+                                                                    <label for="field-7" class="control-label">Personal Info</label>
+                                                                    <textarea class="form-control" id="field-7" placeholder="Write something about yourself" style="margin-top: 0px; margin-bottom: 0px; height: 137px;"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>                                          
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Send message</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                  
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--end row-->
+                        
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+                
+                @@include("partials/footer.html")
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        @@include("partials/right-sidebar.html")
+
+        @@include("partials/vendor-scripts.html")
+
+        <script src="assets/js/app.js"></script>
+
+    </body>
+</html>

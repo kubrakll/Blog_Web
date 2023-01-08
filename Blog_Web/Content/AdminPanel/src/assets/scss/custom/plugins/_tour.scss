@@ -1,0 +1,41 @@
+
+
+.tour-backdrop {
+  position: absolute;
+  z-index: 800;
+  background-color: $black;
+  opacity: .5;
+}
+
+.tour-tour .popover-title {
+  color: $dark;
+  font-size: 18px;
+  padding: 10px;
+  background-color: lighten($gray-200, 2%);
+  border-color: $border-color;
+}
+.popover-content {
+  padding: 10px 14px;
+}
+.tour-active{
+  opacity: 1 !important;
+}
+
+.tour {
+  background-color: $card-bg;
+}
+
+.popover.left>.arrow{
+  border-left-color: $card-bg;
+  &:after{
+    border-left-color: $card-bg;
+  }
+}
+
+.popover.right>.arrow{
+  border-right-color: $card-bg;
+
+  &:after{
+    border-right-color: $card-bg;
+  }
+}

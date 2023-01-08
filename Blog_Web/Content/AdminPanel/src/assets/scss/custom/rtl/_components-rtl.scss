@@ -1,0 +1,98 @@
+//
+// components-rtl.scss
+//
+
+// dropdown
+
+.dropdown-megamenu{
+  &.show{
+    left: 20px!important;
+  }
+}
+
+
+// icons
+
+.icon-list-demo{
+  i{
+    margin-left: 12px;
+    margin-right: 0;
+  }
+}
+
+
+// blockquote
+
+.blockquote {
+  border-left: 0;
+  border-right: 4px solid $gray-300;
+}
+
+.blockquote-reverse {
+  border-right: 0;
+  border-left: 4px solid $gray-300;
+  text-align: left;
+}
+
+
+// widget
+
+.todo-list {
+  .todo-box {
+    .todo-task {
+      .ckbox {
+        span{
+          padding-left: 0;
+          padding-right: 16px;
+
+          &:before, &:after{
+            left: auto;
+            right: 0;
+          }
+        }
+      }
+    }
+
+    i{
+      right: auto;
+      left: 20px;
+    }
+  }
+}
+
+// accordion
+
+.accordion .btn{
+  text-align: right;
+}
+
+#accordionExample {
+  .card-header h5 button::before{
+    left: auto;
+    right: 20px;
+  }
+}
+
+#accordionExample2 {
+  .card-header h5 button::before{
+    right: auto;
+    left: 25px;
+  }
+}
+
+// Invoice
+
+@media print {
+  .content-page,
+  .content,
+  body {
+      margin-right: 0;
+  }
+}
+
+// Demos button 
+.demos-show-btn {
+  left: 0;
+  right: auto;
+  border-radius: 0 6px 6px 0;
+}

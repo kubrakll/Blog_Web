@@ -13,5 +13,20 @@ namespace Blog_Web.Controllers
         {
             return View();
         }
+
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        public ActionResult Text()
+        {
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            return View();
+        }
     }
 }
