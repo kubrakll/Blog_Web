@@ -57,5 +57,11 @@ namespace Blog_Web.Controllers
         }
 
         //Slider işlemleri Son
+
+        //About işlemleri
+
+
+
+        //About İşlemleri Son
     }
 }
