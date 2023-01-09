@@ -1,0 +1,53 @@
+﻿@using Blog_Web.Models.classes
+@model ListViewHomePage
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                   
+                    <h1>Hakkımda</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+@foreach (var item in Model.about)
+{
+    <div class="abt-section mb-150">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="abt-bg">
+                        <img src="@Url.Content(item.Image)" class="video-play-btn popup-youtube">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="abt-text">
+                        <p class="top-sub">@item.Tittle2</p>
+                        <h2> Peki <span class="orange-text">@item.Tittle</span></h2>
+                        <p>@Html.Raw(item.Description)</p>
+
+                        <a href="~/Anasayfa/Contact" class="boxed-btn mt-4">İletişim'e Geç</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+

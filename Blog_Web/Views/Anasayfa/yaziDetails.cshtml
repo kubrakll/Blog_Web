@@ -1,0 +1,72 @@
+﻿@model Blog_Web.Models.classes.Text
+@{
+    ViewBag.Title = "yaziDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <div class="breadcrumb-section breadcrumb-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 text-center">
+                    <div class="breadcrumb-text">
+                        <p>Daha fazlası yazılarımda</p>
+                        <h1>@Model.Title</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-150 mb-150">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="single-article-section">
+                        <div class="single-article-text">
+                            <div class="single-artcile-bg">
+                                <img src="@Url.Content(Model.Image)" />
+                            </div>
+                            <p class="blog-meta">
+                                <span class="author"><i class="fas fa-user"></i> Admin</span>
+                                <span class="date"><i class="fas fa-calendar"></i> @Model.TextDate</span>
+                            </p>
+                            <h2>@Model.Title</h2>
+                            <p>@Html.Raw(Model.Description)</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="sidebar-section">
+                        <div class="recent-posts">
+                            <h4>Recent Posts</h4>
+                            <ul>
+                                <li><a href="single-news.html">You will vainly look for fruit on it in autumn.</a></li>
+                                <li><a href="single-news.html">A man's worth has its season, like tomato.</a></li>
+                                <li><a href="single-news.html">Good thoughts bear good fresh juicy fruit.</a></li>
+                                <li><a href="single-news.html">Fall in love with the fresh orange</a></li>
+                                <li><a href="single-news.html">Why the berries always look delecious</a></li>
+                            </ul>
+                        </div>
+                        <div class="archive-posts">
+                            <h4>Archive Posts</h4>
+                            <ul>
+                                <li><a href="single-news.html">JAN 2019 (5)</a></li>
+                                <li><a href="single-news.html">FEB 2019 (3)</a></li>
+                                <li><a href="single-news.html">MAY 2019 (4)</a></li>
+                                <li><a href="single-news.html">SEP 2019 (4)</a></li>
+                                <li><a href="single-news.html">DEC 2019 (3)</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end single article section -->
+
+
+</body>
+
