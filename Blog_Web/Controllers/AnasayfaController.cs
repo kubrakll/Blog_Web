@@ -105,5 +105,18 @@ namespace Blog_Web.Controllers
             var yazigetir = c.Texts.Find(id);
             return View("yaziDetails", yazigetir);
         }
+
+        public ActionResult CategoryText()
+        {
+            var liste=new ListViewHomePage();
+            liste.categories = c.Categories.ToList();
+            return View(liste);
+        }
+
+        public ActionResult CategoryDetails(int id)
+        {
+            var yazigetir = c.Texts.Find(id);
+            return View("CategoryDetails", yazigetir);
+        }
     }
 }

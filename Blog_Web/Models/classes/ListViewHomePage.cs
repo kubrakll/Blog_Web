@@ -11,6 +11,7 @@ namespace Blog_Web.Models.classes
         public List<About> about{ get; set; }
         public List<Text> text { get; set; }
         public List<Contact> contacts { get; set; } 
+        public List<Category> categories { get; set; }
 
     }
 }

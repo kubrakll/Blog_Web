@@ -151,8 +151,21 @@
     <Compile Include="Migrations\202301101253057_add_tex_CoverLetter.designer.cs">
       <DependentUpon>202301101253057_add_tex_CoverLetter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301101347013_add_Category.cs" />
+    <Compile Include="Migrations\202301101347013_add_Category.designer.cs">
+      <DependentUpon>202301101347013_add_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301101426456_add_text_ilis.cs" />
+    <Compile Include="Migrations\202301101426456_add_text_ilis.designer.cs">
+      <DependentUpon>202301101426456_add_text_ilis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301101620413_add_descr_category.cs" />
+    <Compile Include="Migrations\202301101620413_add_descr_category.designer.cs">
+      <DependentUpon>202301101620413_add_descr_category.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\classes\About.cs" />
+    <Compile Include="Models\classes\Category.cs" />
     <Compile Include="Models\classes\Contact.cs" />
     <Compile Include="Models\classes\Context.cs" />
     <Compile Include="Models\classes\ListViewHomePage.cs" />
@@ -2157,6 +2170,8 @@
     <Content Include="Views\Anasayfa\yaziDetails.cshtml" />
     <Content Include="Views\Anasayfa\ContactForm.cshtml" />
     <Content Include="Views\Anasayfa\About.cshtml" />
+    <Content Include="Views\Anasayfa\CategoryText.cshtml" />
+    <Content Include="Views\Anasayfa\CategoryDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2210,6 +2225,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301101253057_add_tex_CoverLetter.resx">
       <DependentUpon>202301101253057_add_tex_CoverLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301101347013_add_Category.resx">
+      <DependentUpon>202301101347013_add_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301101426456_add_text_ilis.resx">
+      <DependentUpon>202301101426456_add_text_ilis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301101620413_add_descr_category.resx">
+      <DependentUpon>202301101620413_add_descr_category.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

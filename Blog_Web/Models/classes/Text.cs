@@ -26,5 +26,11 @@ namespace Blog_Web.Models.classes
         public string Image { get; set; }
 
         public bool IsActive { get; set; }
+
+
+        //İlişki
+        public int? CategoryID { get; set; }
+
+        public Category Category { get; set; }
     }
 }

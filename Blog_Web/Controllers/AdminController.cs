@@ -136,6 +136,13 @@ namespace Blog_Web.Controllers
         public ActionResult yaziGetir(int id)
         {
             var yazigetir = c.Texts.Find(id);
+            List<SelectListItem> values = (from x in c.Categories.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.CategoryName,
+                                               Value = x.CategoryID.ToString()
+                                           }).ToList();
+            ViewBag.v1 = values;
             return View("yaziGetir", yazigetir);
 
         }
@@ -156,6 +163,7 @@ namespace Blog_Web.Controllers
                 textıd.Description = text.Description;
                 textıd.TextDate = text.TextDate;
                 textıd.CoverLetter = text.CoverLetter;
+                textıd.CategoryID = text.CategoryID;
                 textıd.IsActive = true;
             }
             c.SaveChanges();
@@ -165,6 +173,13 @@ namespace Blog_Web.Controllers
         [HttpGet]
         public ActionResult yeniYazi()
         {
+            List<SelectListItem> values = (from x in c.Categories.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.CategoryName,
+                                               Value = x.CategoryID.ToString()
+                                           }).ToList();
+            ViewBag.v1 = values;
             return View();
         }
 
@@ -181,13 +196,15 @@ namespace Blog_Web.Controllers
                     Title = text.Title,
                     Description = text.Description,
                     TextDate = text.TextDate,
-                    CoverLetter=text.CoverLetter,
-                    IsActive=true,
+                    CoverLetter = text.CoverLetter,
+                    IsActive = true,
+                    CategoryID=text.CategoryID,
                     Image = "~/Content/img/" + dosya.FileName,
 
-                });
-                c.SaveChanges();
+                }) ;
+                
             }
+            c.SaveChanges();
             return View("Index");
         }
 

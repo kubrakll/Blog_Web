@@ -10,6 +10,9 @@
     @Html.Label("Yazı Başlığı")
     @Html.TextAreaFor(x => x.Title, new { @class = "form-control" })
     <br />
+    @Html.Label("Yazının Kategorisi")
+    @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.v1, new { @class = "form-control" })
+    <br />
     @Html.Label("Görünecek Kısa Açıklama")
     @Html.TextAreaFor(x => x.CoverLetter, new { @class = "form-control" })
     <br />
