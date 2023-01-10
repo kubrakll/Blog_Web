@@ -20,6 +20,8 @@ namespace Blog_Web.Models.classes
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "(0:dd/MM/yyyy)")]
         public DateTime TextDate { get; set; }
 
+        public string Image { get; set; }
+
         public bool IsActive { get; set; }
     }
 }
