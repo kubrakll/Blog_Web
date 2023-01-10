@@ -114,7 +114,7 @@
 	    z-index: 999;
 	}
 	.mean-container .mean-bar {
-		z-index: 2;
+		/*z-index: 2;*/
 	}
 	.responsive-menu-wrap {
 	    display: block;
@@ -432,7 +432,7 @@
 	}
 
 	.mean-container .mean-bar {
-	    z-index: 2;
+	    
 	}
 	.section-title {
 	    margin-bottom: 50px;

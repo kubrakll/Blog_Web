@@ -1735,7 +1735,11 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\5.png" />
+    <Content Include="Content\img\6.png" />
+    <Content Include="Content\img\7.png" />
     <Content Include="Content\img\aboutme.jpg" />
+    <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\slider1.jpg" />
     <Content Include="Content\img\slider2.jpeg" />
     <Content Include="Content\img\slider3.jpg" />
