@@ -10,6 +10,9 @@
     @Html.Label("Yazı Başlığı")
     @Html.TextAreaFor(x => x.Title, new { @class = "form-control" })
     <br />
+    @Html.Label("Görünecek Kısa Açıklama")
+    @Html.TextAreaFor(x => x.CoverLetter, new { @class = "form-control" })
+    <br />
     @Html.Label("Açıklama")
     @Html.TextAreaFor(x => x.Description, new { @class = "form-control", id = "summernote" })
     <br />

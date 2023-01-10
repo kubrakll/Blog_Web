@@ -155,6 +155,7 @@ namespace Blog_Web.Controllers
                 textıd.Title = text.Title;
                 textıd.Description = text.Description;
                 textıd.TextDate = text.TextDate;
+                textıd.CoverLetter = text.CoverLetter;
                 textıd.IsActive = true;
             }
             c.SaveChanges();
@@ -180,6 +181,7 @@ namespace Blog_Web.Controllers
                     Title = text.Title,
                     Description = text.Description,
                     TextDate = text.TextDate,
+                    CoverLetter=text.CoverLetter,
                     IsActive=true,
                     Image = "~/Content/img/" + dosya.FileName,
 

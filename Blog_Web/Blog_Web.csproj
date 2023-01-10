@@ -147,6 +147,10 @@
     <Compile Include="Migrations\202301091029537_mig_add_text_image.designer.cs">
       <DependentUpon>202301091029537_mig_add_text_image.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301101253057_add_tex_CoverLetter.cs" />
+    <Compile Include="Migrations\202301101253057_add_tex_CoverLetter.designer.cs">
+      <DependentUpon>202301101253057_add_tex_CoverLetter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\classes\About.cs" />
     <Compile Include="Models\classes\Contact.cs" />
@@ -2203,6 +2207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301091029537_mig_add_text_image.resx">
       <DependentUpon>202301091029537_mig_add_text_image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301101253057_add_tex_CoverLetter.resx">
+      <DependentUpon>202301101253057_add_tex_CoverLetter.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

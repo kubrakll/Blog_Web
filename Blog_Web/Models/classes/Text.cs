@@ -14,6 +14,9 @@ namespace Blog_Web.Models.classes
 
         public string Title { get; set; }
 
+        [StringLength(120)]
+        public string CoverLetter { get; set; }
+
         [AllowHtml]
         public string Description { get; set; }
 
