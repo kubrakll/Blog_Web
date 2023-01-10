@@ -1,0 +1,27 @@
+﻿ <div class="contact-form">
+        @using (Html.BeginForm("contact", "Anasayfa", FormMethod.Post))
+        {
+            <div id="back" class="mb-2 text-center">
+                @if (ViewBag.Succes != null)
+                {
+                    <h5 class="text-success">@ViewBag.Succes</h5>}
+                @if (ViewBag.Error != null)
+                {
+                    <h5 class="text-danger">@ViewBag.Error</h5>}
+
+                <form type="POST" id="fruitkha-contact" onSubmit="return valid_datas( this );">
+                    <p>
+                        <input type="text" placeholder="İsim Soyisim" name="name" id="name">
+                        <input type="email" placeholder="Mail Adresiniz" name="email" id="email">
+                    </p>
+                    <p>
+                        <input type="tel" placeholder="Telefon" name="phone" id="phone">
+                        <input type="text" placeholder="Başlık" name="subject" id="subject">
+                    </p>
+                    <p><textarea name="message" id="message" cols="30" rows="10" placeholder="Mesajınız"></textarea></p>
+                    <input type="hidden" name="token" value="sdsdfs" />
+                    <p><input type="submit" value="Submit"></p>
+                </form>
+            </div>
+        }
+        </div>
