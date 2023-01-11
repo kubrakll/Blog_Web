@@ -107,23 +107,68 @@ namespace Blog_Web.Controllers
         }
 
        
-        public ActionResult CategoryText()
+        //public ActionResult CategoryText()
+        //{
+        //    var liste=new ListViewHomePage();
+        //    liste.categories = c.Categories.ToList();
+        //    liste.text = c.Texts.ToList();
+        //    return View(liste);
+        //}
+
+        
+        //public ActionResult CategoryDetails(int id,int sayfa=1)
+        //{
+        //    var degerler = c.Texts.OrderBy(x => x.TextID).ToPagedList<Text>(sayfa , 10).Where(x => x.TextID == id);
+
+        //    return View(degerler);
+        //}
+
+
+        //---------------------------------------------
+
+        public ActionResult KategoriText()
         {
-            var liste=new ListViewHomePage();
-            liste.categories = c.Categories.ToList();
-            liste.text = c.Texts.ToList();
+            var liste = new ListViewHomePage();
+            liste.siberTexts = c.SiberTexts.ToList();
+            liste.networkTexts = c.NetworkTexts.ToList();
+           // liste.sistemTexts = c.SistemTexts.ToList();
+            return View(liste);
+        }
+    
+        public ActionResult SiberText(int sayfa = 1)
+        {
+            var liste = c.SiberTexts.OrderBy(x => x.SiberTextID).ToPagedList<SiberText>(sayfa, 6);
             return View(liste);
         }
 
-        
-        public ActionResult CategoryDetails(int id,int sayfa=1)
+        public ActionResult siberDetails(int id)
         {
-            var degerler = c.Texts.OrderBy(x => x.TextID).ToPagedList<Text>(sayfa , 10).Where(x => x.TextID == id);
-
-            return View(degerler);
+            var yazigetir = c.SiberTexts.Find(id);
+            return View("siberDetails", yazigetir);
         }
 
-       
-    
+        public ActionResult SistemText(int sayfa=1)
+        {
+            var liste = c.SistemTexts.OrderBy(x => x.SistemTextID).ToPagedList<SistemText>(sayfa, 6);
+            return View(liste);
+        }
+
+        public ActionResult sistemDetails(int id)
+        {
+            var yazigetirr = c.SistemTexts.Find(id);
+            return View("sistemDetails", yazigetirr);
+        }
+
+        public ActionResult NetworkText(int sayfa=1)
+        {
+            var liste = c.NetworkTexts.OrderBy(x => x.NetworkTextID).ToPagedList<NetworkText>(sayfa, 6);
+            return View(liste);
+        }
+
+        public ActionResult networkDetails(int id)
+        {
+            var yazigetirrr = c.NetworkTexts.Find(id);
+            return View("networkDetails", yazigetirrr);
+        }
     }
 }

@@ -1,0 +1,61 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@using Blog_Web.Models.classes
+@model IPagedList<NetworkText>
+@{
+    ViewBag.Title = "NetworkText";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb section -->
+<!-- latest news -->
+
+<div class="latest-news mt-150 mb-150">
+    <div class="container">
+
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-latest-news">
+                        <a href="~/Anasayfa/networkDetails/@item.NetworkTextID">
+                            <div class="latest-news-bg news-bg-1">
+                                <img src="@Url.Content(item.Image)" />
+                            </div>
+                        </a>
+                        <div class="news-text-box">
+                            <h3><a href="~/Anasayfa/networkDetails/@item.NetworkTextID">@item.Title</a></h3>
+                            <p class="blog-meta">
+                                <span class="author"><i class="fas fa-user"></i> Admin</span>
+                                <span class="date"><i class="fas fa-calendar"></i> @item.TextDate</span>
+                            </p>
+                            <p class="excerpt">@item.CoverLetter</p>
+                            <a href="~/Anasayfa/networkDetails/@item.NetworkTextID" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+        </div>
+        @Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("NetworkText", new { sayfa }), new PagedListRenderOptions
+        {
+            LiElementClasses = new List<string>
+            {"page-link"}
+        })
+    </div>
+</div>
+
+

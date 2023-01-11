@@ -1,91 +1,29 @@
-﻿@using Blog_Web.Models.classes
-@model ListViewHomePage
+﻿
 @{
-    ViewBag.Title = "Home";
+    ViewBag.Title = "KategoriText";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!-- home page slider -->
-<div class="homepage-slider">
-    <!-- single home slider -->
-    @foreach (var item in Model.sliders)
-    {
-        <div class="" style="background-image: url(../../@Url.Content(item.Image))">
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-lg-7 offset-lg-1 offset-xl-0">
-                        <div class="hero-text">
-                            <div class="hero-text-tablecell">
-                                <p class="subtitle">Daha fazlası için iletişime geçebilirsiniz</p>
-                                <h1>@item.Title</h1>
-                                <div class="hero-btns">
-                                    <a href="@Url.Content(item.ButtonLink)" class="bordered-btn">@item.ButtonName</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    }
-    
-</div>
-<!-- end home page slider -->
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<div class="row">
-    <div class="col-lg-8 offset-lg-2 text-center">
-        <div class="section-title">
-            <h3><span class="orange-text">Hak</span> kımda</h3>
-
-        </div>
-    </div>
-</div>
-
-
-@foreach (var item in Model.about)
-{
-    <div class="abt-section mb-150">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12">
-                    <div class="abt-bg">
-                        <img src="@Url.Content(item.Image)" class="video-play-btn popup-youtube">
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="abt-text">
-                        <p class="top-sub">@item.Tittle2</p>
-                        <h2> Peki <span class="orange-text">@item.Tittle</span></h2>
-                        <p>@Html.Raw(item.Description)</p>
-                        
-                        <a href="~/Anasayfa/Contact" class="boxed-btn mt-4">İletişim'e Geç</a>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-}
+</div>
+<!-- end breadcrumb section -->
+<!-- latest news -->
 
-
-<div class="latest-news pt-150 pb-150">
+<div class="latest-news mt-150 mb-150">
     <div class="container">
 
         <div class="row">
-            <div class="col-lg-8 offset-lg-2 text-center">
-                <div class="section-title">
-                    <h3><span class="orange-text">Makale</span> lerim</h3>
-                    <p>Yazılarıma eklemek istediğiniz yorumları bana form aracılığı ile iletebilirsiniz.</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="row">
             <div class="col-lg-4 col-md-6">
                 <div class="single-latest-news">
                     <a href="~/Anasayfa/SiberText/">
@@ -144,8 +82,12 @@
                     </div>
                 </div>
             </div>
+
+
+
+
         </div>
-        
     </div>
 </div>
+
 

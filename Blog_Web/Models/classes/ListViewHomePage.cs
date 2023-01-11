@@ -12,6 +12,9 @@ namespace Blog_Web.Models.classes
         public List<Text> text { get; set; }
         public List<Contact> contacts { get; set; } 
         public List<Category> categories { get; set; }
+        public List<SiberText> siberTexts { get; set; }
+        public List<SistemText> sistemTexts { get; set; }
+        public List<NetworkText> networkTexts { get; set; }
         
 
     }

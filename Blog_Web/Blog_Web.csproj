@@ -163,12 +163,31 @@
     <Compile Include="Migrations\202301101620413_add_descr_category.designer.cs">
       <DependentUpon>202301101620413_add_descr_category.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301111231516_add_textler.cs" />
+    <Compile Include="Migrations\202301111231516_add_textler.designer.cs">
+      <DependentUpon>202301111231516_add_textler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301111250343_add_textlers.cs" />
+    <Compile Include="Migrations\202301111250343_add_textlers.designer.cs">
+      <DependentUpon>202301111250343_add_textlers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301111439512_add_source.cs" />
+    <Compile Include="Migrations\202301111439512_add_source.designer.cs">
+      <DependentUpon>202301111439512_add_source.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301111505199_add_date.cs" />
+    <Compile Include="Migrations\202301111505199_add_date.designer.cs">
+      <DependentUpon>202301111505199_add_date.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\classes\About.cs" />
     <Compile Include="Models\classes\Category.cs" />
     <Compile Include="Models\classes\Contact.cs" />
     <Compile Include="Models\classes\Context.cs" />
     <Compile Include="Models\classes\ListViewHomePage.cs" />
+    <Compile Include="Models\classes\NetworkText.cs" />
+    <Compile Include="Models\classes\SiberText.cs" />
+    <Compile Include="Models\classes\SistemText.cs" />
     <Compile Include="Models\classes\Slider.cs" />
     <Compile Include="Models\classes\Text.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -2172,6 +2191,22 @@
     <Content Include="Views\Anasayfa\About.cshtml" />
     <Content Include="Views\Anasayfa\CategoryText.cshtml" />
     <Content Include="Views\Anasayfa\CategoryDetails.cshtml" />
+    <Content Include="Views\Anasayfa\KategoriText.cshtml" />
+    <Content Include="Views\Anasayfa\SiberText.cshtml" />
+    <Content Include="Views\Anasayfa\SistemText.cshtml" />
+    <Content Include="Views\Anasayfa\NetworkText.cshtml" />
+    <Content Include="Views\Admin\siberyazilist.cshtml" />
+    <Content Include="Views\Admin\siberyaziGetir.cshtml" />
+    <Content Include="Views\Admin\siberyeniYazi.cshtml" />
+    <Content Include="Views\Admin\sistemyazilist.cshtml" />
+    <Content Include="Views\Admin\sistemyaziGetir.cshtml" />
+    <Content Include="Views\Admin\sistemyeniYazi.cshtml" />
+    <Content Include="Views\Admin\networkyazilist.cshtml" />
+    <Content Include="Views\Admin\networkyaziGetir.cshtml" />
+    <Content Include="Views\Admin\networkyeniYazi.cshtml" />
+    <Content Include="Views\Anasayfa\siberDetails.cshtml" />
+    <Content Include="Views\Anasayfa\sistemDetails.cshtml" />
+    <Content Include="Views\Anasayfa\networkDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2234,6 +2269,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301101620413_add_descr_category.resx">
       <DependentUpon>202301101620413_add_descr_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301111231516_add_textler.resx">
+      <DependentUpon>202301111231516_add_textler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301111250343_add_textlers.resx">
+      <DependentUpon>202301111250343_add_textlers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301111439512_add_source.resx">
+      <DependentUpon>202301111439512_add_source.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301111505199_add_date.resx">
+      <DependentUpon>202301111505199_add_date.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
