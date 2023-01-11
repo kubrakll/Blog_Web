@@ -28,7 +28,7 @@
                             </div>
                             <p class="blog-meta">
                                 <span class="author"><i class="fas fa-user"></i> Admin</span>
-                                <span class="date"><i class="fas fa-calendar"></i> @Model.TextDate</span>
+                                <span class="date"><i class="fas fa-calendar"></i> @Model.TextDate.ToString("dd.MM.yyyy")</span>
                             </p>
                             <h2>@Model.Title</h2>
                             <p>@Html.Raw(Model.Description)</p>

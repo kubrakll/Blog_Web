@@ -39,7 +39,7 @@
                             <h3><a href="~/Anasayfa/networkDetails/@item.NetworkTextID">@item.Title</a></h3>
                             <p class="blog-meta">
                                 <span class="author"><i class="fas fa-user"></i> Admin</span>
-                                <span class="date"><i class="fas fa-calendar"></i> @item.TextDate</span>
+                                <span class="date"><i class="fas fa-calendar"></i> @item.TextDate.ToString("dd.MM.yyyy")</span>
                             </p>
                             <p class="excerpt">@item.CoverLetter</p>
                             <a href="~/Anasayfa/networkDetails/@item.NetworkTextID" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
