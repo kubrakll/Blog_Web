@@ -10,7 +10,7 @@
     <title>Blog Web Site</title>
 
     <!-- favicon -->
-    <link rel="shortcut icon" type="image/png" href="~/Content/thema/fruitkha-package1.0/fruitkha/assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="~/Content/img/logo.png">
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
@@ -49,28 +49,29 @@
                     <div class="main-menu-wrap">
                         <!-- logo -->
                         <div class="site-logo">
-                            <a href="index.html">
-                                <img src="~/Content/thema/fruitkha-package1.0/fruitkha/assets/img/logo.png" alt="">
+                            <a href="~/Anasayfa/Home">
+                                <img src="~/Content/img/logo.png" alt="">
                             </a>
                         </div>
                         <!-- logo -->
                         <!-- menu start -->
+                        <br />
+                        <br />
                         <nav class="main-menu">
                             <ul>
                                 <li class="current-list-item">
                                     <a href="~/Anasayfa/Home">Anasayfa</a>
                                 </li>
-                                <li><a href="about.html">Hakkımda</a></li>
                                 <li>
-                                    <a href="~/Anasayfa/Text">Yazılarım</a>
+                                    <a href="~/Anasayfa/KategoriText">Makalelerim</a>
                                 </li>
+                                <li><a href="~/Anasayfa/About">Hakkımda</a></li>
+
                                 <li><a href="~/Anasayfa/Contact">İletişim</a></li>
                                 <li>
                                     <div class="header-icons">
-                                        <a class="shopping-cart" href="cart.html"><i class="fab fa-facebook-f"></i></a>
-                                        <a class="mobile-hide search-bar-icon" href="#"><i class="fab fa-twitter"></i></a>
-                                        <a class="mobile-hide search-bar-icon" href="#"><i class="fab fa-instagram"></i></a>
-                                        <a class="mobile-hide search-bar-icon" href="#"><i class="fab fa-linkedin"></i></a>
+                                        <a class="shopping-cart" href="https://www.linkedin.com/in/ahmetustaa/"><i class="fab fa-linkedin" style="font-size:25px;"></i></a>
+                                        <a class="shopping-cart" href="mailto:ahmet.usta@outlook.com.tr"><i class="fab fa-google-plus-square" style="font-size:25px;"></i></a>
                                     </div>
                                 </li>
                             </ul>
@@ -106,7 +107,7 @@
 
     @RenderBody()
 
-    <div class="footer-area">
+    <!--<div class="footer-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6">
@@ -129,47 +130,45 @@
                     <div class="footer-box pages">
                         <h2 class="widget-title">Sayfalar</h2>
                         <ul>
-                            <li><a href="index.html">Anasayfa</a></li>
+                            <li><a href="~/Anasayfa/Home">Anasayfa</a></li>
                             <li><a href="about.html">Hakkımda</a></li>
                             <li><a href="~/Anasayfa/Text">Yazılarım</a></li>
-                            <li><a href="news.html">İletişim</a></li>
-                           
+                            <li><a href="~/Anasayfa/Contact">İletişim</a></li>
+
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-box subscribe">
-                        <h2 class="widget-title">Subscribe</h2>
-                        <p>Subscribe to our mailing list to get the latest updates.</p>
-                        <form action="index.html">
-                            <input type="email" placeholder="Email">
-                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                        </form>
+                        <h2 class="widget-title">Sosyal Medya</h2>
+                        <p>Sosyal Medya İle Benimle İletişime Geçebilirsiniz</p>
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>&nbsp;&nbsp;
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i>&nbsp;&nbsp;
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i>&nbsp;&nbsp;
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i>&nbsp;&nbsp;
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- end footer -->
     <!-- copyright -->
     <div class="copyright">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
-                    <p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>,  All Rights Reserved.</p>
+                    <p> &copy; @DateTime.Now.Year - <a href="~/Anasayfa/Home">SolutionPartnerWhale</a>,  Tüm Hakları Saklıdır..</p>
                 </div>
                 <div class="col-lg-6 text-right col-md-12">
                     <div class="social-icons">
                         <ul>
-                            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+                            <li><p>Site Hakkında iletişim için </p></li>
+                            <li><a href="https://www.linkedin.com/in/k%C3%BCbra-kili%C3%A7/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
     <!-- end copyright -->

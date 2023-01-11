@@ -15,7 +15,7 @@
     <link href="~/Content/AdminPanel/dist/assets/libs/metrojs/release/MetroJs.Full/MetroJs.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Bootstrap Css -->
-    <link href="~/Content/AdminPanel/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <link href="~/Content/AdminPanel/dist/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
     <link href="~/Content/AdminPanel/dist/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
@@ -313,7 +313,7 @@
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
                                 <li><a href="/Admin/sliderlist/">Slider</a></li>
-                                <li><a href="/Admin/otherservicelist/">Other Service</a></li>
+                               
                             </ul>
                         </li>
                         <li>
@@ -323,23 +323,24 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/Admin/servicelist/" class=" waves-effect">
-                                <i class="mdi mdi-calendar"></i>
-                                <span>Hizmetlerimiz</span>
+                            <a href="javascript: void(0);" class="waves-effect">
+                                <i class="mdi mdi-speedometer"></i>
+                                <span class="badge badge-pill badge-danger float-right"></span>
+                                <span>Yazılarımız</span>
                             </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="/Admin/siberyazilist/">Siber Güvenlik</a></li>
+
+                            </ul>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="/Admin/sistemyazilist/">Sistem Uzmanlığı</a></li>
+
+                            </ul><ul class="sub-menu" aria-expanded="false">
+                                <li><a href="/Admin/networkyazilist/">Network Uzmanlığı</a></li>
+                               
+                            </ul>
                         </li>
-                        <li>
-                            <a href="calendar.html" class=" waves-effect">
-                                <i class="mdi mdi-calendar"></i>
-                                <span>İletişim</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/Admin/referancelist/" class=" waves-effect">
-                                <i class="mdi mdi-calendar"></i>
-                                <span>Referanslarımız</span>
-                            </a>
-                        </li>
+                        
                         <li class="menu-title">Kullanıcılar</li>
                         <li>
                             <a href="calendar.html" class=" waves-effect">
@@ -354,13 +355,7 @@
                                 <span>Doldurulan Formlar</span>
                             </a>
                         </li>
-                        <li class="menu-title">Sıkça Sorulan Sorular</li>
-                        <li>
-                            <a href="/Admin/askedlist/" class=" waves-effect">
-                                <i class="mdi mdi-calendar"></i>
-                                <span>S.S.S</span>
-                            </a>
-                        </li>
+                        
 
                     </ul>
                 </div>
