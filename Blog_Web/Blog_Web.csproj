@@ -53,6 +53,12 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -127,6 +133,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AnasayfaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -136,10 +143,32 @@
     <Compile Include="Migrations\202301081712223_mig_add_entity.designer.cs">
       <DependentUpon>202301081712223_mig_add_entity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301091029537_mig_add_text_image.cs" />
+    <Compile Include="Migrations\202301091029537_mig_add_text_image.designer.cs">
+      <DependentUpon>202301091029537_mig_add_text_image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301101253057_add_tex_CoverLetter.cs" />
+    <Compile Include="Migrations\202301101253057_add_tex_CoverLetter.designer.cs">
+      <DependentUpon>202301101253057_add_tex_CoverLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301101347013_add_Category.cs" />
+    <Compile Include="Migrations\202301101347013_add_Category.designer.cs">
+      <DependentUpon>202301101347013_add_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301101426456_add_text_ilis.cs" />
+    <Compile Include="Migrations\202301101426456_add_text_ilis.designer.cs">
+      <DependentUpon>202301101426456_add_text_ilis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301101620413_add_descr_category.cs" />
+    <Compile Include="Migrations\202301101620413_add_descr_category.designer.cs">
+      <DependentUpon>202301101620413_add_descr_category.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\classes\About.cs" />
+    <Compile Include="Models\classes\Category.cs" />
     <Compile Include="Models\classes\Contact.cs" />
     <Compile Include="Models\classes\Context.cs" />
+    <Compile Include="Models\classes\ListViewHomePage.cs" />
     <Compile Include="Models\classes\Slider.cs" />
     <Compile Include="Models\classes\Text.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1723,6 +1752,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\5.png" />
+    <Content Include="Content\img\6.png" />
+    <Content Include="Content\img\7.png" />
+    <Content Include="Content\img\aboutme.jpg" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\slider1.jpg" />
+    <Content Include="Content\img\slider2.jpeg" />
+    <Content Include="Content\img\slider3.jpg" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="Content\thema\fruitkha-package1.0\fruitkha\404.html" />
     <Content Include="Content\thema\fruitkha-package1.0\fruitkha\about.html" />
     <Content Include="Content\thema\fruitkha-package1.0\fruitkha\assets\bootstrap\css\bootstrap-grid.css" />
@@ -2120,6 +2158,20 @@
     <Content Include="Views\Anasayfa\Text.cshtml" />
     <Content Include="Views\Anasayfa\Contact.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\SliderGetir.cshtml" />
+    <Content Include="Views\Admin\sliderlist.cshtml" />
+    <Content Include="Views\Admin\aboutlist.cshtml" />
+    <Content Include="Views\Admin\AboutGetir.cshtml" />
+    <Content Include="Views\Admin\yeniabout.cshtml" />
+    <Content Include="Views\Admin\yazilist.cshtml" />
+    <Content Include="Views\Admin\yaziGetir.cshtml" />
+    <Content Include="Views\Admin\yeniYazi.cshtml" />
+    <Content Include="Views\Anasayfa\yaziDetails.cshtml" />
+    <Content Include="Views\Anasayfa\ContactForm.cshtml" />
+    <Content Include="Views\Anasayfa\About.cshtml" />
+    <Content Include="Views\Anasayfa\CategoryText.cshtml" />
+    <Content Include="Views\Anasayfa\CategoryDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2167,6 +2219,21 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202301081712223_mig_add_entity.resx">
       <DependentUpon>202301081712223_mig_add_entity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301091029537_mig_add_text_image.resx">
+      <DependentUpon>202301091029537_mig_add_text_image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301101253057_add_tex_CoverLetter.resx">
+      <DependentUpon>202301101253057_add_tex_CoverLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301101347013_add_Category.resx">
+      <DependentUpon>202301101347013_add_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301101426456_add_text_ilis.resx">
+      <DependentUpon>202301101426456_add_text_ilis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301101620413_add_descr_category.resx">
+      <DependentUpon>202301101620413_add_descr_category.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -16,5 +16,7 @@ namespace Blog_Web.Models.classes
 
         public DbSet<Text> Texts { get; set; }
 
+        public DbSet<Category> Categories { get; set; }
+
     }
 }

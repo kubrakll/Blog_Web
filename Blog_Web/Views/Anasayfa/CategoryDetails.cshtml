@@ -1,10 +1,8 @@
-﻿@using PagedList
-@using PagedList.Mvc
+﻿@using PagedList.Mvc
 @using Blog_Web.Models.classes
-@model IPagedList<Text>
-
+@model PagedList.IPagedList<Text>
 @{
-    ViewBag.Title = "Text";
+    ViewBag.Title = "CategoryDetails";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -15,7 +13,7 @@
         <div class="row">
             <div class="col-lg-8 offset-lg-2 text-center">
                 <div class="breadcrumb-text">
-                    
+
                 </div>
             </div>
         </div>
@@ -52,13 +50,11 @@
             }
 
         </div>
-        @Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Text", new { sayfa }), new PagedListRenderOptions
+        @Html.PagedListPager((PagedList.IPagedList)Model, sayfa => Url.Action("CategoryDetails", new { sayfa }), new PagedListRenderOptions
         {
             LiElementClasses = new List<string>
             {"page-link"}
         })
     </div>
 </div>
-
-
 

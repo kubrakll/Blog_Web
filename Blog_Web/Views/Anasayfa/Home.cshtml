@@ -1,4 +1,5 @@
-﻿
+﻿@using Blog_Web.Models.classes
+@model ListViewHomePage
 @{
     ViewBag.Title = "Home";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,94 +8,70 @@
 <!-- home page slider -->
 <div class="homepage-slider">
     <!-- single home slider -->
-    <div class="single-homepage-slider homepage-bg-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-lg-7 offset-lg-1 offset-xl-0">
-                    <div class="hero-text">
-                        <div class="hero-text-tablecell">
-                            <p class="subtitle">Fresh & Organic</p>
-                            <h1>Delicious Seasonal Fruits</h1>
-                            <div class="hero-btns">
-                                <a href="shop.html" class="boxed-btn">Fruit Collection</a>
-                                <a href="contact.html" class="bordered-btn">Contact Us</a>
+    @foreach (var item in Model.sliders)
+    {
+        <div class="" style="background-image: url(../../@Url.Content(item.Image))">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-7 offset-lg-1 offset-xl-0">
+                        <div class="hero-text">
+                            <div class="hero-text-tablecell">
+                                <p class="subtitle">Daha fazlası için iletişime geçebilirsiniz</p>
+                                <h1>@item.Title</h1>
+                                <div class="hero-btns">
+                                    <a href="@item.ButtonLink" class="bordered-btn">@item.ButtonName</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- single home slider -->
-    <div class="single-homepage-slider homepage-bg-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1 text-center">
-                    <div class="hero-text">
-                        <div class="hero-text-tablecell">
-                            <p class="subtitle">Fresh Everyday</p>
-                            <h1>100% Organic Collection</h1>
-                            <div class="hero-btns">
-                                <a href="shop.html" class="boxed-btn">Visit Shop</a>
-                                <a href="contact.html" class="bordered-btn">Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- single home slider -->
-    <div class="single-homepage-slider homepage-bg-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1 text-right">
-                    <div class="hero-text">
-                        <div class="hero-text-tablecell">
-                            <p class="subtitle">Mega Sale Going On!</p>
-                            <h1>Get December Discount</h1>
-                            <div class="hero-btns">
-                                <a href="shop.html" class="boxed-btn">Visit Shop</a>
-                                <a href="contact.html" class="bordered-btn">Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    }
+    
 </div>
 <!-- end home page slider -->
 
-<br /><br /><br /><br /><br />
+<br />
+<br />
+<br />
+<br />
+<br />
 <div class="row">
     <div class="col-lg-8 offset-lg-2 text-center">
         <div class="section-title">
-            <h3><span class="orange-text">Our</span> News</h3>
-           
+            <h3><span class="orange-text">Hak</span> kımda</h3>
+
         </div>
     </div>
 </div>
-<div class="abt-section mb-150">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-12">
-                <div class="abt-bg">
-                    <a href="https://www.youtube.com/watch?v=DBLlFWYcIGQ" class="video-play-btn popup-youtube"><i class="fas fa-play"></i></a>
+
+
+@foreach (var item in Model.about)
+{
+    <div class="abt-section mb-150">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="abt-bg">
+                        <img src="@Url.Content(item.Image)" class="video-play-btn popup-youtube">
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-                <div class="abt-text">
-                    <p class="top-sub">Since Year 1999</p>
-                    <h2>We are <span class="orange-text">Fruitkha</span></h2>
-                    <p>Etiam vulputate ut augue vel sodales. In sollicitudin neque et massa porttitor vestibulum ac vel nisi. Vestibulum placerat eget dolor sit amet posuere. In ut dolor aliquet, aliquet sapien sed, interdum velit. Nam eu molestie lorem.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente facilis illo repellat veritatis minus, et labore minima mollitia qui ducimus.</p>
-                    <a href="about.html" class="boxed-btn mt-4">know more</a>
+                <div class="col-lg-6 col-md-12">
+                    <div class="abt-text">
+                        <p class="top-sub">@item.Tittle2</p>
+                        <h2> Peki <span class="orange-text">@item.Tittle</span></h2>
+                        <p>@Html.Raw(item.Description)</p>
+                        
+                        <a href="~/Anasayfa/Contact" class="boxed-btn mt-4">İletişim'e Geç</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+}
+
 
 <div class="latest-news pt-150 pb-150">
     <div class="container">
@@ -102,59 +79,35 @@
         <div class="row">
             <div class="col-lg-8 offset-lg-2 text-center">
                 <div class="section-title">
-                    <h3><span class="orange-text">Our</span> News</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fuga quas itaque eveniet beatae optio.</p>
+                    <h3><span class="orange-text">Makale</span> lerim</h3>
+                    <p>Yazılarıma eklemek istediğiniz yorumları bana form aracılığı ile iletebilirsiniz.</p>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="single-latest-news">
-                    <a href="single-news.html"><div class="latest-news-bg news-bg-1"></div></a>
-                    <div class="news-text-box">
-                        <h3><a href="single-news.html">You will vainly look for fruit on it in autumn.</a></h3>
-                        <p class="blog-meta">
-                            <span class="author"><i class="fas fa-user"></i> Admin</span>
-                            <span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-                        </p>
-                        <p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
-                        <a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-latest-news">
-                    <a href="single-news.html"><div class="latest-news-bg news-bg-2"></div></a>
-                    <div class="news-text-box">
-                        <h3><a href="single-news.html">A man's worth has its season, like tomato.</a></h3>
-                        <p class="blog-meta">
-                            <span class="author"><i class="fas fa-user"></i> Admin</span>
-                            <span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-                        </p>
-                        <p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
-                        <a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
-                <div class="single-latest-news">
-                    <a href="single-news.html"><div class="latest-news-bg news-bg-3"></div></a>
-                    <div class="news-text-box">
-                        <h3><a href="single-news.html">Good thoughts bear good fresh juicy fruit.</a></h3>
-                        <p class="blog-meta">
-                            <span class="author"><i class="fas fa-user"></i> Admin</span>
-                            <span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-                        </p>
-                        <p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
-                        <a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-                    </div>
+            @foreach (var item in Model.text) {
+        <div class="col-lg-4 col-md-6">
+            <div class="single-latest-news">
+                <a href="~/Anasayfa/yaziDetails/@item.TextID"><div class="latest-news-bg news-bg-1">
+                    <img src="@Url.Content(item.Image)" />
+                </div></a>
+                <div class="news-text-box">
+                    <h3><a href="~/Anasayfa/yaziDetails/@item.TextID">@item.Title</a></h3>
+                    <p class="blog-meta">
+                        <span class="author"><i class="fas fa-user"></i> Admin</span>
+                        <span class="date"><i class="fas fa-calendar"></i> @item.TextDate</span>
+                    </p>
+                    <p class="excerpt">@item.CoverLetter</p>
+                    <a href="~/Anasayfa/yaziDetails/@item.TextID" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
                 </div>
             </div>
         </div>
+            }
+        </div>
         <div class="row">
             <div class="col-lg-12 text-center">
-                <a href="news.html" class="boxed-btn">More News</a>
+                <a href="~/Anasayfa/Text/" class="boxed-btn">More News</a>
             </div>
         </div>
     </div>
