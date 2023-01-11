@@ -106,17 +106,24 @@ namespace Blog_Web.Controllers
             return View("yaziDetails", yazigetir);
         }
 
+       
         public ActionResult CategoryText()
         {
             var liste=new ListViewHomePage();
             liste.categories = c.Categories.ToList();
+            liste.text = c.Texts.ToList();
             return View(liste);
         }
 
-        public ActionResult CategoryDetails(int id)
+        
+        public ActionResult CategoryDetails(int id,int sayfa=1)
         {
-            var yazigetir = c.Texts.Find(id);
-            return View("CategoryDetails", yazigetir);
+            var degerler = c.Texts.OrderBy(x => x.TextID).ToPagedList<Text>(sayfa , 10).Where(x => x.TextID == id);
+
+            return View(degerler);
         }
+
+       
+    
     }
 }

@@ -1,9 +1,11 @@
-﻿@using Blog_Web.Models.classes
-@model List<Text>
+﻿@using PagedList.Mvc
+@using Blog_Web.Models.classes
+@model PagedList.IPagedList<Text>
 @{
     ViewBag.Title = "CategoryDetails";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 
 <!-- breadcrumb-section -->
 <div class="breadcrumb-section breadcrumb-bg">
@@ -48,7 +50,11 @@
             }
 
         </div>
-
+        @Html.PagedListPager((PagedList.IPagedList)Model, sayfa => Url.Action("CategoryDetails", new { sayfa }), new PagedListRenderOptions
+        {
+            LiElementClasses = new List<string>
+            {"page-link"}
+        })
     </div>
 </div>
 
